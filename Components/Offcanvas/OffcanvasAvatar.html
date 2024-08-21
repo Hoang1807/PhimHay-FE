@@ -4,7 +4,7 @@
 		<div class="offcanvas-header pb-0">
 			<div>
 				<button type="button" id="btn-close-login" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-				<span class="fw-light mt-2 d-block">Chào khách!</span>
+				<span class="fw-light mt-2 d-block">Hello guest!</span>
 			</div>
 			<label> <img class="navbar-img-avatar m-3" style="width: 80px; height: 80px;"
 				src="Asset/Image/Avatar.png" alt="ảnh đại diện" />
@@ -14,10 +14,10 @@
 			<div class="card-header">
 				<ul class="nav nav-pills card-header-pills">
 					<li class="nav-item">
-						<a class="nav-link active" data-bs-toggle="list" href="#tab-dangnhap">Đăng nhập</a>
+						<a class="nav-link active" data-bs-toggle="list" href="#tab-dangnhap">Login</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link ${activeDK }" data-bs-toggle="list" href="#tab-dangky">Đăng ký</a>
+						<a class="nav-link ${activeDK }" data-bs-toggle="list" href="#tab-dangky">Register</a>
 					</li>
 				</ul>
 			</div>
@@ -29,27 +29,27 @@
 								class="form-control" placeholder="Tên tài khoản" required>
 							<label for="taikhoan_gmail">Gmail</label>
 						</div>
-						<p class="text-danger" ng-show="formdangnhap.email.$touched && formdangnhap.email.$invalid">Vui lòng nhập lại Email</p>
+						<p class="text-danger" ng-show="formdangnhap.email.$touched && formdangnhap.email.$invalid">Please re-enter Email</p>
 						<div class="input-group mb-3">
 							<div class="form-floating">
 								<input type="password" class="form-control pass" id="taikhoan_pass" ng-model="user.pass" name="pass"
-									placeholder="Mật khẩu" required>
-								<label for="taikhoan_pass">Mật khẩu</label>
+									placeholder="Password" required>
+								<label for="taikhoan_pass">Password</label>
 							</div>
 							<span class="input-group-text" ng-click="changeIconPassword()">
 								<i id="iconPass" class="bi bi-eye-slash"></i>
 							</span>
 						</div>
-						<p class="text-danger" ng-show="formdangnhap.pass.$touched && formdangnhap.pass.$invalid">Vui lòng nhập mật khẩu</p>
+						<p class="text-danger" ng-show="formdangnhap.pass.$touched && formdangnhap.pass.$invalid">Please re-enter password</p>
 						<div class="form-check mb-3">
 							<input class="form-check-input" type="checkbox" value="" id="remember">
-							<label class="form-check-label" for="remember"> Ghi nhớ </label>
+							<label class="form-check-label" for="remember"> remember </label>
 						</div>
 						<p class="text-danger" ng-bind="messError"></p>
 						<div class="d-grid">
 							<span class="text-danger" id="err-dangnhap" ng-bind="errMess"></span>
 							<button class="btn btn-primary btn-login text-uppercase fw-bold"
-								ng-disabled="!formdangnhap.$valid" type="submit">Đăng nhập</button>
+								ng-disabled="!formdangnhap.$valid" type="submit">Login</button>
 						</div>
 					</form>
 				</div>
@@ -60,7 +60,7 @@
 								placeholder="Tên tài khoản" required>
 							<label for="dangky_gmail">Gmail</label>
 						</div>
-						<span class="text-danger" ng-show="formdangky.email.$touched && formdangky.email.$invalid"> Vui lòng nhập lại email</span>
+						<span class="text-danger" ng-show="formdangky.email.$touched && formdangky.email.$invalid">Please re-enter Email</span>
 						<div class="input-group mb-3">
 							<div class="form-floating">
 								<input type="password" class="form-control" name="pass" ng-model="new_user.pass" id="pass_register"
@@ -71,18 +71,18 @@
 								<i id="iconPass_register" class="bi bi-eye-slash"></i>
 							</span>
 						</div>
-						<span class="text-danger" ng-show="formdangky.pass.$touched && formdangky.pass.$invalid"> Vui lòng nhập mật khẩu</span>
+						<span class="text-danger" ng-show="formdangky.pass.$touched && formdangky.pass.$invalid">Please re-enter Password</span>
 						<div class="input-group mb-3">
 							<div class="form-floating">
 								<input type="password" class="form-control" name="passconfirm" ng-model="new_user.passconfirm" id="password_confirm"
-									placeholder="Nhập lại mật khẩu" required>
-								<label for="password_confirm">Nhập lại mật khẩu</label>
+									placeholder="Please re-enter Password" required>
+								<label for="password_confirm">Please re-enter Password</label>
 							</div>
 						</div>
-						<span class="text-danger" ng-show="new_user.pass != new_user.passconfirm"> Mật khẩu không trùng khớp</span>
+						<span class="text-danger" ng-show="new_user.pass != new_user.passconfirm">Passwords do not match</span>
 						<div class="d-grid">
 							<button class="btn btn-primary btn-login text-uppercase fw-bold"
-								ng-disabled="!formdangky.$valid || new_user.pass != new_user.passconfirm" type="submit">Đăng ký</button>
+								ng-disabled="!formdangky.$valid || new_user.pass != new_user.passconfirm" type="submit">Register</button>
 							<span class="text-danger" ng-bind="mess"></span>
 							
 						</div>
