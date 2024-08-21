@@ -20,7 +20,7 @@ app.controller("AdminCtrl", ["$scope", "$rootScope", "$http", "$window", "$timeo
                     data: {
                         labels: $scope.listEpisodes.map(item => item.linkVideo),
                         datasets: [{
-                            label: "Lượt xem",
+                            label: "views",
                             data: $scope.listEpisodes.map(item => item.luotXem),
                             borderWidth: 1,
                             backgroundColor: [
